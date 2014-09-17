@@ -60,15 +60,13 @@ fi
 AC_PATH_PROGS([GNUPLOT], [gnuplot], ,
              [$PATH:/usr/local/bin:/usr/bin:/usr/X11R6/bin])
 if test -z "$GNUPLOT"; then
-  AC_MSG_WARN([*** gnuplot not found some scripts may not be usable])
-  GNUPLOT=
+  AC_MSG_ERROR([*** gnuplot is required])
 fi
 
 AC_PATH_PROGS([BC], [bc], ,
              [$PATH:/usr/local/bin:/usr/bin:/usr/X11R6/bin])
 if test -z "$BC"; then
-  AC_MSG_WARN([*** bc not found some scripts may not be usable])
-  BC=
+  AC_MSG_ERROR([*** bc is required])
 fi
 
 
