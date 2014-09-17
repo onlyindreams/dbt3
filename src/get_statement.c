@@ -12,11 +12,13 @@
 #include "common.h"
 #include "db.h"
 
+#define LINE_SIZE 512
+
 extern struct sql_statement_t sql_statement;
 
 int get_statement(FILE *query_input)
 {
-	char line[128];
+	char line[LINE_SIZE];
 	char *pos_begin;
 	int comment_index, statement_index;
 
@@ -25,7 +27,7 @@ int get_statement(FILE *query_input)
 	comment_index=0;
 	statement_index=0;
 
-	while (fgets(line, 127, query_input) != NULL)
+	while (fgets(line, LINE_SIZE, query_input) != NULL)
 	{
 		/* skip the blank lines */
 		if (line[0] == '\n')
@@ -99,9 +101,9 @@ int get_statement(FILE *query_input)
 
 void ltrim(char *str)
 {
-	char *start_pos;
-
-	start_pos=str;
-	while (*start_pos == ' ' || *start_pos == '\t') start_pos++;
-	strcpy(str, start_pos);
+  char *start_pos=strdup(str);
+  char *pos=start_pos;
+  while (*pos == ' ' || *pos == '\t') pos++;
+  strcpy(str, pos);
+  free(start_pos);
 }

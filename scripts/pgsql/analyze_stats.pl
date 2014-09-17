@@ -81,7 +81,7 @@ sub process {
 	my $i;
 	print FILE "set xlabel \"Elapsed Time (Minutes)\"\n";
 	print FILE "set ylabel \"$ylabel\"\n";
-	print FILE "set term png small\n";
+	print FILE "set term png\n";
 	print FILE "set output \"$png_filename\"\n";
 	print FILE "set yrange [0:]\n";
 	print FILE "plot \"$filename\" using 1:1 title \"$names[ 0 ]\" with lines, \\\n";
