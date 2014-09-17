@@ -57,6 +57,21 @@ if test -z "$VMSTAT"; then
   VMSTAT=
 fi
 
+AC_PATH_PROGS([GNUPLOT], [gnuplot], ,
+             [$PATH:/usr/local/bin:/usr/bin:/usr/X11R6/bin])
+if test -z "$GNUPLOT"; then
+  AC_MSG_WARN([*** gnuplot not found some scripts may not be usable])
+  GNUPLOT=
+fi
+
+AC_PATH_PROGS([BC], [bc], ,
+             [$PATH:/usr/local/bin:/usr/bin:/usr/X11R6/bin])
+if test -z "$BC"; then
+  AC_MSG_WARN([*** bc not found some scripts may not be usable])
+  BC=
+fi
+
+
 dnl> Configuration options for different databases, MySQL is default.
 AC_ARG_WITH(postgresql,
 	[ AC_HELP_STRING([ --with-postgresql=DIR], [])],
