@@ -54,7 +54,7 @@ echo "set title \"Procs\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set grid xtics ytics" >> ${OUTDIR}/${INPUT_FILE}
 echo "set xlabel \"Elapsed Time (${X_UNITS})\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set ylabel \"Count\"" >> ${OUTDIR}/${INPUT_FILE}
-echo "set term png small" >> ${OUTDIR}/${INPUT_FILE}
+echo "set term png" >> ${OUTDIR}/${INPUT_FILE}
 echo "set output \"${PNG_FILE}\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set yrange [0:]" >> ${OUTDIR}/${INPUT_FILE}
 echo "plot \"${DATAFILE}\" using 1:2 title \"waiting for run time\" with lines, \\" >> ${OUTDIR}/${INPUT_FILE}
@@ -70,7 +70,7 @@ echo "set title \"Memory\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set grid xtics ytics" >> ${OUTDIR}/${INPUT_FILE}
 echo "set xlabel \"Elapsed Time (${X_UNITS})\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set ylabel \"Kilobytes\"" >> ${OUTDIR}/${INPUT_FILE}
-echo "set term png small" >> ${OUTDIR}/${INPUT_FILE}
+echo "set term png" >> ${OUTDIR}/${INPUT_FILE}
 echo "set output \"${PNG_FILE}\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set yrange [0:]" >> ${OUTDIR}/${INPUT_FILE}
 echo "plot \"${DATAFILE}\" using 1:4 title \"Swapped\" with lines, \\" >> ${OUTDIR}/${INPUT_FILE}
@@ -88,7 +88,7 @@ echo "set title \"Swap\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set grid xtics ytics" >> ${OUTDIR}/${INPUT_FILE}
 echo "set xlabel \"Elapsed Time (${X_UNITS})\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set ylabel \"Kilobytes / Second\"" >> ${OUTDIR}/${INPUT_FILE}
-echo "set term png small" >> ${OUTDIR}/${INPUT_FILE}
+echo "set term png" >> ${OUTDIR}/${INPUT_FILE}
 echo "set output \"${PNG_FILE}\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set yrange [0:]" >> ${OUTDIR}/${INPUT_FILE}
 echo "plot \"${DATAFILE}\" using 1:8 title \"in from disk\" with lines, \\" >> ${OUTDIR}/${INPUT_FILE}
@@ -104,7 +104,7 @@ echo "set title \"IO\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set grid xtics ytics" >> ${OUTDIR}/${INPUT_FILE}
 echo "set xlabel \"Elapsed Time (${X_UNITS})\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set ylabel \"Blocks per Second\"" >> ${OUTDIR}/${INPUT_FILE}
-echo "set term png small" >> ${OUTDIR}/${INPUT_FILE}
+echo "set term png" >> ${OUTDIR}/${INPUT_FILE}
 echo "set output \"${PNG_FILE}\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set yrange [0:]" >> ${OUTDIR}/${INPUT_FILE}
 echo "plot \"${DATAFILE}\" using 1:10 title \"received from device\" with lines, \\" >> ${OUTDIR}/${INPUT_FILE}
@@ -120,7 +120,7 @@ echo "set title \"Interrupts\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set grid xtics ytics" >> ${OUTDIR}/${INPUT_FILE}
 echo "set xlabel \"Elapsed Time (${X_UNITS})\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set ylabel \"# of Interrupts / Second\"" >> ${OUTDIR}/${INPUT_FILE}
-echo "set term png small" >> ${OUTDIR}/${INPUT_FILE}
+echo "set term png" >> ${OUTDIR}/${INPUT_FILE}
 echo "set output \"${PNG_FILE}\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set yrange [0:]" >> ${OUTDIR}/${INPUT_FILE}
 echo "plot \"${DATAFILE}\" using 1:12 title \"interrupts\" with lines" >> ${OUTDIR}/${INPUT_FILE}
@@ -135,7 +135,7 @@ echo "set title \"Context Switches\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set grid xtics ytics" >> ${OUTDIR}/${INPUT_FILE}
 echo "set xlabel \"Elapsed Time (${X_UNITS})\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set ylabel \"# of Context Switches / Second\"" >> ${OUTDIR}/${INPUT_FILE}
-echo "set term png small" >> ${OUTDIR}/${INPUT_FILE}
+echo "set term png" >> ${OUTDIR}/${INPUT_FILE}
 echo "set output \"${PNG_FILE}\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set yrange [0:]" >> ${OUTDIR}/${INPUT_FILE}
 echo "plot \"${DATAFILE}\" using 1:13 title \"context switches\" with lines" >> ${OUTDIR}/${INPUT_FILE}
@@ -150,7 +150,7 @@ echo "set title \"System Processor Utilization\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set grid xtics ytics" >> ${OUTDIR}/${INPUT_FILE}
 echo "set xlabel \"Elapsed Time (${X_UNITS})\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set ylabel \"% Utilized\"" >> ${OUTDIR}/${INPUT_FILE}
-echo "set term png small" >> ${OUTDIR}/${INPUT_FILE}
+echo "set term png" >> ${OUTDIR}/${INPUT_FILE}
 echo "set output \"${PNG_FILE}\"" >> ${OUTDIR}/${INPUT_FILE}
 echo "set yrange [0:100]" >> ${OUTDIR}/${INPUT_FILE}
 echo "plot \"${DATAFILE}\" using 1:18 title \"total\" with lines, \\" >> ${OUTDIR}/${INPUT_FILE}
